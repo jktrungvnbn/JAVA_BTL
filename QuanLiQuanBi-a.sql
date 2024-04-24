@@ -5,14 +5,14 @@ create table Ban(
 )
 
 create table ChiTietHD(
-	MaHD varchar(10)  not null,
-	MaSP varchar(10)  not null,
+	MaHD int  not null,
+	MaSP int  not null,
 	SoLuong int not null
 		constraint PK_CTHD primary key(MaHD, MaSP)
 )
 
 create table HoaDon(
-	MaHD varchar(10) primary key not null,
+	MaHD int primary key not null,
 	MaKH int,
 	SoBan int,
 	NgayLapHD date,
@@ -68,7 +68,7 @@ create table NhanVien(
 );
 
 create table SanPham(
-    MaSP varchar(10) primary key,
+    MaSP int primary key,
     TenSP nvarchar(50) not null, 
     Gia int,
     MaNCC int,
@@ -86,5 +86,4 @@ create table Voucher(
 );
 
 
-drop table SanPham
 
