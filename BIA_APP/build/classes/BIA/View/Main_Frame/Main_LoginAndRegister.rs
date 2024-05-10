@@ -1,0 +1,11 @@
+RTDRestaurant.View.Main_Frame.Main_LoginAndRegister$2
+RTDRestaurant.View.Main_Frame.Main_LoginAndRegister$3
+RTDRestaurant.View.Main_Frame.Main_LoginAndRegister$4
+RTDRestaurant.View.Main_Frame.Main_LoginAndRegister$5
+RTDRestaurant.View.Main_Frame.Main_LoginAndRegister$6
+RTDRestaurant.View.Main_Frame.Main_LoginAndRegister$7
+RTDRestaurant.View.Main_Frame.Main_LoginAndRegister$8
+RTDRestaurant.View.Main_Frame.Main_LoginAndRegister
+RTDRestaurant.View.Main_Frame.Main_LoginAndRegister$9
+RTDRestaurant.View.Main_Frame.Main_LoginAndRegister$10
+RTDRestaurant.View.Main_Frame.Main_LoginAndRegister$1

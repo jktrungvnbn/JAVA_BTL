@@ -1,0 +1,1 @@
+RTDRestaurant.Model.ModelCard
