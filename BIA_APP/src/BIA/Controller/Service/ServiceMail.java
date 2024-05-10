@@ -43,7 +43,7 @@ public class ServiceMail {
             message.addRecipient(Message.RecipientType.TO, new InternetAddress(toEmail));
             message.setSubject("Verify Code");
             message.setText(code + " là mã xác minh tài khoản"
-                            + " Royal TheDreamers Restaurant của bạn.");
+                            + " BIA VIET của bạn.");
             Transport.send(message);
             ms.setSuccess(true);
         } catch (MessagingException e) {

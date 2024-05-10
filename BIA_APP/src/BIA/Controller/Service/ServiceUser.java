@@ -71,7 +71,7 @@ public class ServiceUser {
         int userID=r.getInt("ID_ND")+1;
         
         //Thêm Ngưgời Dùng
-        String sql_ND = "";
+        String sql_ND = "INSERT INTO NguoiDung (ID_ND,Email, MatKhau, VerifyCode,Vaitro) VALUES (?,?, ?, ?,'Khach Hang')";
         PreparedStatement p=con.prepareStatement(sql_ND);
         String code=generateVerifiyCode();
         p.setInt(1, userID);
