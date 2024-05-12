@@ -12,7 +12,7 @@ public class PanelVerifyCode extends javax.swing.JPanel {
 
     public PanelVerifyCode() {
         initComponents();
-        setOpaque(false);
+        //setOpaque(false);
         setFocusCycleRoot(true);
         super.setVisible(false);
         addMouseListener(new MouseAdapter() {

@@ -31,7 +31,7 @@ public class MS_PayBill extends javax.swing.JDialog {
         initComponents();
         service = new ServiceCustomer();
         this.frame = parent;
-        setOpacity(0f);
+        //setOpacity(0f);
         jScrollPane1.setVerticalScrollBar(new ScrollBarCustom());
         jScrollPane1.getViewport().setBackground(Color.WHITE);
         getContentPane().setBackground(Color.WHITE);
@@ -39,9 +39,9 @@ public class MS_PayBill extends javax.swing.JDialog {
             @Override
             public void timingEvent(float fraction) {
                 if (show) {
-                    setOpacity(fraction);
+                    //setOpacity(fraction);
                 } else {
-                    setOpacity(1f - fraction);
+                    //setOpacity(1f - fraction);
                 }
             }
 

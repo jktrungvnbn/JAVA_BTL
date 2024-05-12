@@ -30,15 +30,15 @@ public class MS_ConfirmReserve extends javax.swing.JDialog {
         initComponents();
         service = new ServiceStaff();
         this.frame = parent;
-        setOpacity(0f);
+        //setOpacity(0f);
         getContentPane().setBackground(Color.WHITE);
         TimingTarget target = new TimingTargetAdapter() {
             @Override
             public void timingEvent(float fraction) {
                 if (show) {
-                    setOpacity(fraction);
+                    //setOpacity(fraction);
                 } else {
-                    setOpacity(1f - fraction);
+                    //setOpacity(1f - fraction);
                 }
             }
 

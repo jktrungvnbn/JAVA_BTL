@@ -137,7 +137,7 @@ public class ServiceCustomer {
     //Lấy thông tin khách hàng từ ID người dùng
     public ModelKhachHang getCustomer(int userID) throws SQLException {
         ModelKhachHang data = null;
-        String sql = "SESELECT ID_KH, TenKH, DATE_FORMAT(NgayHD, '%d-%m-%Y')DH AS NgayTG, Doanhso, Diemtichluy " +
+        String sql = "SELECT ID_KH, TenKH, DATE_FORMAT(NgayThamGia, '%d-%m-%Y')DH AS NgayTG, Doanhso, Diemtichluy " +
                     "FROM KhachHang " +
                     "WHERE ID_ND = ?";
         PreparedStatement p = con.prepareStatement(sql);
@@ -256,7 +256,7 @@ public class ServiceCustomer {
     //Lấy thông tin HoaDon mà Khách hàng vừa đặt, Hóa Đơn có trạng thái 'Chưa thanh toán'
     public ModelHoaDon FindHoaDon(ModelKhachHang customer) throws SQLException {
         ModelHoaDon hoadon = null;
-        String sql = "SELECT ID_HoaDon,ID_KH,ID_Ban,DATE_FORMAT(NgayHD,'%d-%m-%Y') AS Ngay,TienMonAn,Code_Voucher,TienGiam,Tongtien,Trangthai FROM HoaDon "
+        String sql = "SELECT ID_HoaDon,ID_KH,ID_Ban,DATE_FORMAT(NgayThamGia,'%d-%m-%Y')HD AS Ngay,TienMonAn,Code_Voucher,TienGiam,Tongtien,Trangthai FROM HoaDon "
                 + "WHERE ID_KH=? AND Trangthai='Chua thanh toan'";
         PreparedStatement p = con.prepareStatement(sql);
         p.setInt(1, customer.getID_KH());
