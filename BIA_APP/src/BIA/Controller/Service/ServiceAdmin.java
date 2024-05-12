@@ -25,7 +25,7 @@ public class ServiceAdmin {
     //Lấy toàn bộ danh sách nhân viên
     public ArrayList<ModelNhanVien> getListNV() throws SQLException {
         ArrayList<ModelNhanVien> list = new ArrayList();
-        String sql = "SELECT ID_NV,TenNV, DATE_FORMAT(NgayVL, '%d-%m-%Y')DH as Ngay,SDT,ChucVu,ID_NQL,TinhTrang FROM NhanVien";
+        String sql = "SELECT ID_NV,TenNV, DATE_FORMAT(NgayVL, '%d-%m-%Y') as Ngay,SDT,ChucVu,ID_NQL,TinhTrang FROM NhanVien";
         PreparedStatement p = con.prepareStatement(sql);
         ResultSet r = p.executeQuery();
         while (r.next()) {
@@ -80,7 +80,7 @@ public class ServiceAdmin {
 
     //Thêm mới một nhân viên
     public void insertNV(ModelNhanVien data) throws SQLException {
-        String sql = "INSERT INTO NhanVien(ID_NV,TenNV,NgayVL,SDT,Chucvu,ID_NQL,TinhTrang) VALUES (?,?,STR_DATE_FORMAT(?,'%d-%m-%Y'),?,?,?,'Dang lam viec')";
+        String sql = "INSERT INTO NhanVien(ID_NV,TenNV,NgayVL,SDT,Chucvu,ID_NQL,TinhTrang) VALUES (?,?,STR_TO_DATE(?,'%d-%m-%Y'),?,?,?,'Dang lam viec')";
         PreparedStatement p = con.prepareStatement(sql);
         p.setInt(1, data.getId_NV());
         p.setString(2, data.getTenNV());
@@ -116,17 +116,17 @@ public class ServiceAdmin {
     //Lấy toàn bộ danh sách hóa đơn trong Tất cả/ngày/tháng/năm
     public ArrayList<ModelHoaDon> getListHDIn(String txt) throws SQLException {
         ArrayList<ModelHoaDon> list = new ArrayList();
-        String sql = "SELECT ID_HoaDon,ID_KH,ID_Ban,DATE_FORMAT(NgayHD,'dd-mm-YYYY')DH as Ngay,Tienmonan,Tiengiam,Tongtien FROM HoaDon";
+        String sql = "SELECT ID_HoaDon,ID_KH,ID_Ban,DATE_FORMAT(NgayHD,'%d-%m-%Y')DH as Ngay,Tienmonan,Tiengiam,Tongtien FROM HoaDon";
         if (txt.equals("Tất cả")) {
-            sql = "SELECT ID_HoaDon,ID_KH,ID_Ban,DATE_FORMAT(NgayHD,'dd-mm-YYYY')DH as Ngay,Tienmonan,Tiengiam,Tongtien FROM HoaDon";
+            sql = "SELECT ID_HoaDon,ID_KH,ID_Ban,DATE_FORMAT(NgayHD,'%d-%m-%Y')DH as Ngay,Tienmonan,Tiengiam,Tongtien FROM HoaDon";
         } else if (txt.equals("Hôm nay")) {
-            sql = "SELECT ID_HoaDon,ID_KH,ID_Ban,DATE_FORMAT(NgayHD,'dd-mm-YYYY')DH as Ngay,Tienmonan,Tiengiam,Tongtien FROM HoaDon "
+            sql = "SELECT ID_HoaDon,ID_KH,ID_Ban,DATE_FORMAT(NgayHD,'%d-%m-%Y')DH as Ngay,Tienmonan,Tiengiam,Tongtien FROM HoaDon "
                     + "WHERE DATE_FORMAT(NgayHD,'dd-mm-YYYY')=DATE_FORMAT(CURRENT_DATE,'dd-mm-YYYY')";
         } else if (txt.equals("Tháng này")) {
-            sql = "SELECT ID_HoaDon,ID_KH,ID_Ban,DATE_FORMAT(NgayHD,'dd-mm-YYYY')DH as Ngay,Tienmonan,Tiengiam,Tongtien FROM HoaDon "
+            sql = "SELECT ID_HoaDon,ID_KH,ID_Ban,DATE_FORMAT(NgayHD,'%d-%m-%Y')DH as Ngay,Tienmonan,Tiengiam,Tongtien FROM HoaDon "
                     + "WHERE EXTRACT(MONTH FROM NgayHD)=EXTRACT(MONTH FROM CURRENT_DATE) AND EXTRACT(YEAR FROM NgayHD)=EXTRACT(YEAR FROM CURRENT_DATE)";
         } else if (txt.equals("Năm này")) {
-            sql = "SELECT ID_HoaDon,ID_KH,ID_Ban,DATE_FORMAT(NgayHD,'dd-mm-YYYY')DH as Ngay,Tienmonan,Tiengiam,Tongtien FROM HoaDon "
+            sql = "SELECT ID_HoaDon,ID_KH,ID_Ban,DATE_FORMAT(NgayHD,'%d-%m-%Y')DH as Ngay,Tienmonan,Tiengiam,Tongtien FROM HoaDon "
                     + "WHERE EXTRACT(YEAR FROM NgayHD)=EXTRACT(YEAR FROM CURRENT_DATE) ";
         }
         PreparedStatement p = con.prepareStatement(sql);
@@ -151,9 +151,9 @@ public class ServiceAdmin {
     public int getRevenueHD(String filter) throws SQLException {
         int revenue = 0;
         
-        String sql = "SELECT SUM(Tongtien) FROM HoaDon WHERE DATE_FORMAT(NgayHD,'dd-mm-YYYY')=DATE_FORMAT(CURRENT_DATE,'dd-mm-YYYY')";
+        String sql = "SELECT SUM(Tongtien) FROM HoaDon WHERE DATE_FORMAT(NgayHD,'%d-%m-%Y')=DATE_FORMAT(CURRENT_DATE,'dd-mm-YYYY')";
         if(filter.equals("Hôm nay")){
-            sql = "SELECT SUM(Tongtien) FROM HoaDon WHERE DATE_FORMAT(NgayHD,'dd-mm-YYYY')=DATE_FORMAT(CURRENT_DATE,'dd-mm-YYYY')";
+            sql = "SELECT SUM(Tongtien) FROM HoaDon WHERE DATE_FORMAT(NgayHD,'%d-%m-%Y')=DATE_FORMAT(CURRENT_DATE,'dd-mm-YYYY')";
         }else if(filter.equals("Tháng này")){
             sql = "SELECT SUM(Tongtien) FROM HoaDon WHERE EXTRACT(MONTH FROM NgayHD)=EXTRACT(MONTH FROM CURRENT_DATE) "
                     + "AND EXTRACT(YEAR FROM NgayHD)=EXTRACT(YEAR FROM CURRENT_DATE)";
@@ -221,9 +221,9 @@ public class ServiceAdmin {
     public int getCostNK(String filter) throws SQLException {
         int revenue = 0;
         
-        String sql = "SELECT SUM(Tongtien) FROM PhieuNK WHERE DATE_FORMAT(NgayNK,'dd-mm-YYYY')=DATE_FORMAT(CURRENT_DATE,'dd-mm-YYYY')";
+        String sql = "SELECT SUM(Tongtien) FROM PhieuNK WHERE DATE_FORMAT(NgayNK,'%d-%m-%Y')=DATE_FORMAT(CURRENT_DATE,'%d-%m-%Y')";
         if(filter.equals("Hôm nay")){
-            sql = "SELECT SUM(Tongtien) FROM PhieuNK WHERE DATE_FORMAT(NgayNK,'dd-mm-YYYY')=DATE_FORMAT(CURRENT_DATE,'dd-mm-YYYY')";
+            sql = "SELECT SUM(Tongtien) FROM PhieuNK WHERE DATE_FORMAT(NgayNK,'%d-%m-%Y')=DATE_FORMAT(CURRENT_DATE,'%d-%m-%Y')";
         }else if(filter.equals("Tháng này")){
             sql = "SELECT SUM(Tongtien) FROM PhieuNK WHERE EXTRACT(MONTH FROM NgayNK)=EXTRACT(MONTH FROM CURRENT_DATE) "
                     + "AND EXTRACT(YEAR FROM NgayNK)=EXTRACT(YEAR FROM CURRENT_DATE)";
