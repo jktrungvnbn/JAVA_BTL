@@ -15,6 +15,7 @@
             <file>file:/E:/JAVA_BTL/BIA_APP/src/BIA/Controller/Service/ServiceMail.java</file>
             <file>file:/E:/JAVA_BTL/BIA_APP/src/BIA/View/Main_Frame/Main_Admin_Frame.java</file>
             <file>file:/E:/JAVA_BTL/BIA_APP/src/BIA/View/Component/Customer_Component/CardBan.java</file>
+            <file>file:/E:/JAVA_BTL/BIA_APP/src/BIA/View/Form/Staff_Form/Admin/StaffManagement_Form.java</file>
             <file>file:/E:/JAVA_BTL/BIA_APP/src/BIA/View/Component/Customer_Component/CardVoucher.java</file>
             <file>file:/E:/JAVA_BTL/BIA_APP/src/BIA/View/Form/MainForm.java</file>
             <file>file:/E:/JAVA_BTL/BIA_APP/src/BIA/Controller/Service/ServiceStaff.java</file>
@@ -36,6 +37,8 @@
             <file>file:/E:/JAVA_BTL/BIA_APP/src/BIA/View/Main_Frame/Main_LoginAndRegister.java</file>
             <file>file:/E:/JAVA_BTL/BIA_APP/src/BIA/View/Dialog/MS_ChangePassword.java</file>
             <file>file:/E:/JAVA_BTL/BIA_APP/src/BIA/View/Dialog/MS_Success.java</file>
+            <file>file:/E:/JAVA_BTL/BIA_APP/src/BIA/View/Form/Staff_Form/WarehouseStaff/Export_Form.java</file>
+            <file>file:/E:/JAVA_BTL/BIA_APP/src/BIA/View/Form/Staff_Form/Admin/BillStatistic_Form.java</file>
             <file>file:/E:/JAVA_BTL/BIA_APP/src/BIA/View/Component/Customer_Component/Menu.java</file>
             <file>file:/E:/JAVA_BTL/BIA_APP/src/BIA/View/Component/LoginAndRegister_Component/PanelCover.java</file>
             <file>file:/E:/JAVA_BTL/BIA_APP/src/BIA/View/Component/Admin_Component/Card.java</file>

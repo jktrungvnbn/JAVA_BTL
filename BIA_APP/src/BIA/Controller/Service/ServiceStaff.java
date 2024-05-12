@@ -124,7 +124,7 @@ public class ServiceStaff {
     //Xóa một nguyên liệu
     public void DeleteNL(ModelNguyenLieu data) throws SQLException {
         //Xóa nguyên liệu đó khỏi KHO
-        String sql = "DELETE FROM KHO WHERE ID_NL = ?";
+        String sql = "DELETE FROM Kho WHERE ID_NL = ?";
         PreparedStatement ps = con.prepareStatement(sql);
         ps.setInt(1, data.getId());
         ps.execute();
@@ -228,7 +228,7 @@ public class ServiceStaff {
     //Lấy toàn bộ danh sách Phiếu xuất kho
     public ArrayList<ModelPXK> MenuPXK() throws SQLException {
         ArrayList<ModelPXK> list = new ArrayList<>();
-        String sql = "SELECT ID_XK,ID_NV,DATE_FORMAT(NgayVL, '%d-%m-%Y') AS Ngay FROM PhieuXK ORDER BY ID_XK";
+        String sql = "SELECT ID_XK,ID_NV,DATE_FORMAT(NgayXK, '%d-%m-%Y') AS Ngay FROM PhieuXK ORDER BY ID_XK";
         PreparedStatement ps = con.prepareStatement(sql);
         ResultSet r =  ps.executeQuery();
         while (r.next()) {
@@ -246,7 +246,7 @@ public class ServiceStaff {
     //Lấy thông tin của Phiếu xuất kho theo ID
     public ModelPXK getPXKbyID(int id) throws SQLException {
         ModelPXK data = null;
-        String sql = "SELECT ID_XK,ID_NV,DATE_FORMAT(NgayVL, '%d-%m-%Y') AS Ngay FROM PhieuXK WHERE ID_XK=?";
+        String sql = "SELECT ID_XK,ID_NV,DATE_FORMAT(NgayXK, '%d-%m-%Y') AS Ngay FROM PhieuXK WHERE ID_XK=?";
         PreparedStatement ps = con.prepareStatement(sql);
          ps.setInt(1, id);
         ResultSet r =  ps.executeQuery();
@@ -431,7 +431,7 @@ public class ServiceStaff {
 
     //Điều chỉnh trạng thái bàn thành Đã đặt trước sau khi nhân viên xác nhận
     public void setTableReserve(int idBan) throws SQLException {
-        String sql = "UPDATE BAN SET TrangThai = 'Da dat truoc' WHERE ID_Ban=?";
+        String sql = "UPDATE Ban SET TrangThai = 'Da dat truoc' WHERE ID_Ban=?";
         PreparedStatement ps = con.prepareStatement(sql);
          ps.setInt(1, idBan);
          ps.execute();
@@ -440,7 +440,7 @@ public class ServiceStaff {
 
     //Hủy trạng thái bàn đã Đặt trước trước thành Còn trống
     public void CancelTableReserve(int idBan) throws SQLException {
-        String sql = "UPDATE BAN SET TrangThai = 'Con trong' WHERE ID_Ban=?";
+        String sql = "UPDATE Ban SET TrangThai = 'Con trong' WHERE ID_Ban=?";
         PreparedStatement ps = con.prepareStatement(sql);
          ps.setInt(1, idBan);
          ps.execute();
