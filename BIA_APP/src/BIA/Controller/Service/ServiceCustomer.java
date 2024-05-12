@@ -236,9 +236,9 @@ public class ServiceCustomer {
         }
        
         //Thêm Hoá Đơn mới
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("MM-dd-yyyy");
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd-mm-YYYY");
         String sql = "INSERT INTO HoaDon(ID_HoaDon,ID_KH,ID_Ban,NgayHD,TienMonAn,TienGiam,Trangthai)"
-                + " VALUES (?,?,?,DATE_FORMAT(?, '%d-%m-%Y'),0,0,'Chua thanh toan')";
+                + " VALUES (?,?,?,STR_TO_DATE(?, '%d-%m-%Y'),0,0,'Chua thanh toan')";
         PreparedStatement p = con.prepareStatement(sql);
         p.setInt(1, idHD);
         p.setInt(2, customer.getID_KH());
@@ -332,7 +332,7 @@ public class ServiceCustomer {
     //Lấy toàn bộ danh sách hóa đơn của một khách hàng
     public ArrayList<ModelHoaDon> getListHD(int ID_KH) throws SQLException {
         ArrayList<ModelHoaDon> list = new ArrayList<>();
-        String sql = "SELECT ID_HoaDon,ID_KH,ID_Ban, DATE_FORMAT(NgayHD, '%d-%m-%Y')DH AS Ngay,TienMonAn,Code_Voucher,TienGiam,Tongtien,Trangthai FROM HoaDon "
+        String sql = "SELECT ID_HoaDon,ID_KH,ID_Ban, DATE_FORMAT(NgayHD, '%d-%m-%Y') AS Ngay,TienMonAn,Code_Voucher,TienGiam,Tongtien,Trangthai FROM HoaDon "
                 + "WHERE ID_KH=? ORDER BY ID_HoaDon";
         PreparedStatement p = con.prepareStatement(sql);
         p.setInt(1, ID_KH);
