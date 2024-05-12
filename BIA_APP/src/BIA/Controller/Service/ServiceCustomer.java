@@ -137,9 +137,7 @@ public class ServiceCustomer {
     //Lấy thông tin khách hàng từ ID người dùng
     public ModelKhachHang getCustomer(int userID) throws SQLException {
         ModelKhachHang data = null;
-        String sql = "SELECT ID_KH, TenKH, DATE_FORMAT(NgayThamGia, '%d-%m-%Y')DH AS NgayTG, Doanhso, Diemtichluy " +
-                    "FROM KhachHang " +
-                    "WHERE ID_ND = ?";
+        String sql = "SELECT ID_KH, TenKH, DATE_FORMAT(NgayThamGia, '%d-%m-%Y') AS NgayTG, DoanhSo, Diemtichluy FROM KhachHang WHERE ID_ND = ?";
         PreparedStatement p = con.prepareStatement(sql);
         p.setInt(1, userID);
         ResultSet r = p.executeQuery();
@@ -240,7 +238,7 @@ public class ServiceCustomer {
         //Thêm Hoá Đơn mới
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("%d-%m-%Y");
         String sql = "INSERT INTO HoaDon(ID_HoaDon,ID_KH,ID_Ban,NgayHD,TienMonAn,TienGiam,Trangthai)"
-                + " VALUES (?,?,?,STR_TO_DATE(?, '%d-%m-%Y'),0,0,'Chua thanh toan')";
+                + " VALUES (?,?,?,DATE_FORMAT(?, '%d-%m-%Y'),0,0,'Chua thanh toan')";
         PreparedStatement p = con.prepareStatement(sql);
         p.setInt(1, idHD);
         p.setInt(2, customer.getID_KH());
