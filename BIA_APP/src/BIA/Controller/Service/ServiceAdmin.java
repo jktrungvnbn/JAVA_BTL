@@ -47,7 +47,7 @@ public class ServiceAdmin {
     //Lấy thông tin nhân viên từ ID
     public ModelNhanVien getNV(int idNV) throws SQLException {
         ModelNhanVien data = null;
-        String sql = "SELECT ID_NV,TenNV, DATE_FORMAT(NgayVL, '%d-%m-%Y')DH as Ngay,SDT,ChucVu,ID_NQL,TinhTrang FROM NhanVien WHERE ID_NV=?";
+        String sql = "SELECT ID_NV,TenNV, DATE_FORMAT(NgayVL, '%d-%m-%Y') as NgayVL,SDT,ChucVu,ID_NQL,TinhTrang FROM NhanVien WHERE ID_NV=?";
         PreparedStatement p = con.prepareStatement(sql);
         p.setInt(1, idNV);
         ResultSet r = p.executeQuery();
@@ -116,17 +116,17 @@ public class ServiceAdmin {
     //Lấy toàn bộ danh sách hóa đơn trong Tất cả/ngày/tháng/năm
     public ArrayList<ModelHoaDon> getListHDIn(String txt) throws SQLException {
         ArrayList<ModelHoaDon> list = new ArrayList();
-        String sql = "SELECT ID_HoaDon,ID_KH,ID_Ban,DATE_FORMAT(NgayHD,'%d-%m-%Y')DH as Ngay,Tienmonan,Tiengiam,Tongtien FROM HoaDon";
+        String sql = "SELECT ID_HoaDon,ID_KH,ID_Ban,DATE_FORMAT(NgayHD,'%d-%m-%Y') as Ngay,Tienmonan,Tiengiam,Tongtien FROM HoaDon";
         if (txt.equals("Tất cả")) {
-            sql = "SELECT ID_HoaDon,ID_KH,ID_Ban,DATE_FORMAT(NgayHD,'%d-%m-%Y')DH as Ngay,Tienmonan,Tiengiam,Tongtien FROM HoaDon";
+            sql = "SELECT ID_HoaDon,ID_KH,ID_Ban,DATE_FORMAT(NgayHD,'%d-%m-%Y') as Ngay,Tienmonan,Tiengiam,Tongtien FROM HoaDon";
         } else if (txt.equals("Hôm nay")) {
-            sql = "SELECT ID_HoaDon,ID_KH,ID_Ban,DATE_FORMAT(NgayHD,'%d-%m-%Y')DH as Ngay,Tienmonan,Tiengiam,Tongtien FROM HoaDon "
-                    + "WHERE DATE_FORMAT(NgayHD,'dd-mm-YYYY')=DATE_FORMAT(CURRENT_DATE,'dd-mm-YYYY')";
+            sql = "SELECT ID_HoaDon,ID_KH,ID_Ban,DATE_FORMAT(NgayHD,'%d-%m-%Y') as Ngay,Tienmonan,Tiengiam,Tongtien FROM HoaDon "
+                    + "WHERE DATE_FORMAT(NgayHD,'%d-%m-%Y')=DATE_FORMAT(CURRENT_DATE,'%d-%m-%Y')";
         } else if (txt.equals("Tháng này")) {
-            sql = "SELECT ID_HoaDon,ID_KH,ID_Ban,DATE_FORMAT(NgayHD,'%d-%m-%Y')DH as Ngay,Tienmonan,Tiengiam,Tongtien FROM HoaDon "
+            sql = "SELECT ID_HoaDon,ID_KH,ID_Ban,DATE_FORMAT(NgayHD,'%d-%m-%Y') as Ngay,Tienmonan,Tiengiam,Tongtien FROM HoaDon "
                     + "WHERE EXTRACT(MONTH FROM NgayHD)=EXTRACT(MONTH FROM CURRENT_DATE) AND EXTRACT(YEAR FROM NgayHD)=EXTRACT(YEAR FROM CURRENT_DATE)";
         } else if (txt.equals("Năm này")) {
-            sql = "SELECT ID_HoaDon,ID_KH,ID_Ban,DATE_FORMAT(NgayHD,'%d-%m-%Y')DH as Ngay,Tienmonan,Tiengiam,Tongtien FROM HoaDon "
+            sql = "SELECT ID_HoaDon,ID_KH,ID_Ban,DATE_FORMAT(NgayHD,'%d-%m-%Y') as Ngay,Tienmonan,Tiengiam,Tongtien FROM HoaDon "
                     + "WHERE EXTRACT(YEAR FROM NgayHD)=EXTRACT(YEAR FROM CURRENT_DATE) ";
         }
         PreparedStatement p = con.prepareStatement(sql);
