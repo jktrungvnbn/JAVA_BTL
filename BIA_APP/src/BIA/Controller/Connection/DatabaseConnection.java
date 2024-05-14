@@ -30,7 +30,7 @@ public class DatabaseConnection {
        connection =DriverManager.getConnection (url,"root","Klmnop123#");
         System.out.println("ok");
         } catch (Exception e) {
-             System.out.println("BIA.Controller.Connection.DatabaseConnection.connectToDatabase()");
+             System.out.println("loi mang");
         }
     }
  
