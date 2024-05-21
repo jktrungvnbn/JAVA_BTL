@@ -236,7 +236,7 @@ public class ServiceCustomer {
         }
        
         //Thêm Hoá Đơn mới
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd-mm-YYYY");
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd-MM-YYYY");
         String sql = "INSERT INTO HoaDon(ID_HoaDon,ID_KH,ID_Ban,NgayHD,TienMonAn,TienGiam,Trangthai)"
                 + " VALUES (?,?,?,STR_TO_DATE(?, '%d-%m-%Y'),0,0,'Chua thanh toan')";
         PreparedStatement p = con.prepareStatement(sql);
