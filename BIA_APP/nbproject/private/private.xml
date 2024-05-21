@@ -16,7 +16,6 @@
             <file>file:/E:/JAVA_BTL/BIA_APP/src/BIA/View/Main_Frame/Main_Admin_Frame.java</file>
             <file>file:/E:/JAVA_BTL/BIA_APP/src/BIA/View/Component/Customer_Component/CardBan.java</file>
             <file>file:/E:/JAVA_BTL/BIA_APP/src/BIA/View/Form/Staff_Form/Admin/StaffManagement_Form.java</file>
-            <file>file:/E:/JAVA_BTL/BIA_APP/src/BIA/View/Component/Customer_Component/CardVoucher.java</file>
             <file>file:/E:/JAVA_BTL/BIA_APP/src/BIA/View/Form/MainForm.java</file>
             <file>file:/E:/JAVA_BTL/BIA_APP/src/BIA/Controller/Service/ServiceStaff.java</file>
             <file>file:/E:/JAVA_BTL/BIA_APP/src/BIA/View/Dialog/MS_CancelReserve.java</file>
@@ -24,8 +23,6 @@
             <file>file:/E:/JAVA_BTL/BIA_APP/src/BIA/View/Component/WarehouseStaff_Component/MenuStaff.java</file>
             <file>file:/E:/JAVA_BTL/BIA_APP/src/BIA/View/Component/LoginAndRegister_Component/PanelLoginAndRegister.java</file>
             <file>file:/E:/JAVA_BTL/BIA_APP/src/BIA/Controller/Service/ServiceUser.java</file>
-            <file>file:/E:/JAVA_BTL/BIA_APP/src/BIA/View/Component/Admin_Component/MenuA.java</file>
-            <file>file:/E:/JAVA_BTL/BIA_APP/src/BIA/View/Component/Customer_Component/CardMonAn.java</file>
             <file>file:/E:/JAVA_BTL/BIA_APP/src/BIA/View/Component/Staff_Component/MenuS.java</file>
             <file>file:/E:/JAVA_BTL/BIA_APP/src/BIA/Controller/Service/ServiceCustomer.java</file>
             <file>file:/E:/JAVA_BTL/BIA_APP/src/BIA/View/Dialog/MS_Confirm.java</file>
@@ -38,9 +35,7 @@
             <file>file:/E:/JAVA_BTL/BIA_APP/src/BIA/View/Dialog/MS_Success.java</file>
             <file>file:/E:/JAVA_BTL/BIA_APP/src/BIA/View/Form/Staff_Form/WarehouseStaff/Export_Form.java</file>
             <file>file:/E:/JAVA_BTL/BIA_APP/src/BIA/View/Form/Staff_Form/Admin/BillStatistic_Form.java</file>
-            <file>file:/E:/JAVA_BTL/BIA_APP/src/BIA/View/Component/Customer_Component/Menu.java</file>
             <file>file:/E:/JAVA_BTL/BIA_APP/src/BIA/View/Component/LoginAndRegister_Component/PanelCover.java</file>
-            <file>file:/E:/JAVA_BTL/BIA_APP/src/BIA/View/Component/Admin_Component/Card.java</file>
             <file>file:/E:/JAVA_BTL/BIA_APP/src/BIA/View/Form/Customer_Form/Bill_Form.java</file>
             <file>file:/E:/JAVA_BTL/BIA_APP/src/BIA/View/Dialog/MS_Admin_Confirm.java</file>
             <file>file:/E:/JAVA_BTL/BIA_APP/src/BIA/View/Dialog/MS_ConfirmReserve.java</file>
