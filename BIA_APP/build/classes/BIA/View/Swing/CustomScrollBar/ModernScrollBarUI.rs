@@ -1,2 +1,0 @@
-RTDRestaurant.View.Swing.CustomScrollBar.ModernScrollBarUI
-RTDRestaurant.View.Swing.CustomScrollBar.ModernScrollBarUI$ScrollBarButton

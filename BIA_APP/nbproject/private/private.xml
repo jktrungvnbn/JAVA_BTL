@@ -2,46 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/E:/JAVA_BTL/BIA_APP/src/BIA/View/Dialog/MS_PaymentSuccess.java</file>
-            <file>file:/E:/JAVA_BTL/BIA_APP/src/BIA/View/Form/Customer_Form/TableMenu_Form.java</file>
-            <file>file:/E:/JAVA_BTL/BIA_APP/src/BIA/View/Component/LoginAndRegister_Component/PanelVerifyCode.java</file>
-            <file>file:/E:/JAVA_BTL/BIA_APP/src/BIA/View/Dialog/MS_ConfirmOrderFood.java</file>
-            <file>file:/E:/JAVA_BTL/BIA_APP/src/BIA/View/Component/Staff_Component/CardBanS.java</file>
-            <file>file:/E:/JAVA_BTL/BIA_APP/src/BIA/View/Dialog/MS_ConfirmExchangeVoucher.java</file>
-            <file>file:/E:/JAVA_BTL/BIA_APP/src/BIA/View/Dialog/MS_PayBill.java</file>
-            <file>file:/E:/JAVA_BTL/BIA_APP/src/BIA/View/Form/Customer_Form/Voucher_Form.java</file>
-            <file>file:/E:/JAVA_BTL/BIA_APP/src/BIA/View/Component/LoginAndRegister_Component/Message.java</file>
-            <file>file:/E:/JAVA_BTL/BIA_APP/src/BIA/Controller/Service/ServiceMail.java</file>
-            <file>file:/E:/JAVA_BTL/BIA_APP/src/BIA/View/Main_Frame/Main_Admin_Frame.java</file>
-            <file>file:/E:/JAVA_BTL/BIA_APP/src/BIA/View/Component/Customer_Component/CardBan.java</file>
-            <file>file:/E:/JAVA_BTL/BIA_APP/src/BIA/View/Form/Staff_Form/Admin/StaffManagement_Form.java</file>
-            <file>file:/E:/JAVA_BTL/BIA_APP/src/BIA/View/Form/MainForm.java</file>
-            <file>file:/E:/JAVA_BTL/BIA_APP/src/BIA/Controller/Service/ServiceStaff.java</file>
-            <file>file:/E:/JAVA_BTL/BIA_APP/src/BIA/View/Dialog/MS_CancelReserve.java</file>
-            <file>file:/E:/JAVA_BTL/BIA_APP/src/BIA/View/Component/LoginAndRegister_Component/PanelLoading.java</file>
-            <file>file:/E:/JAVA_BTL/BIA_APP/src/BIA/View/Component/WarehouseStaff_Component/MenuStaff.java</file>
-            <file>file:/E:/JAVA_BTL/BIA_APP/src/BIA/View/Component/LoginAndRegister_Component/PanelLoginAndRegister.java</file>
-            <file>file:/E:/JAVA_BTL/BIA_APP/src/BIA/Controller/Service/ServiceUser.java</file>
-            <file>file:/E:/JAVA_BTL/BIA_APP/src/BIA/View/Component/Staff_Component/MenuS.java</file>
-            <file>file:/E:/JAVA_BTL/BIA_APP/src/BIA/Controller/Service/ServiceCustomer.java</file>
-            <file>file:/E:/JAVA_BTL/BIA_APP/src/BIA/View/Dialog/MS_Confirm.java</file>
-            <file>file:/E:/JAVA_BTL/BIA_APP/src/BIA/Controller/Service/ServiceAdmin.java</file>
-            <file>file:/E:/JAVA_BTL/BIA_APP/src/BIA/View/Main_Frame/Main_WarehouseStaff_Frame.java</file>
-            <file>file:/E:/JAVA_BTL/BIA_APP/src/BIA/View/Main_Frame/Main_Staff_Frame.java</file>
-            <file>file:/E:/JAVA_BTL/BIA_APP/src/BIA/View/Form/Staff_Form/AccountS_Form.java</file>
-            <file>file:/E:/JAVA_BTL/BIA_APP/src/BIA/View/Main_Frame/Main_LoginAndRegister.java</file>
-            <file>file:/E:/JAVA_BTL/BIA_APP/src/BIA/View/Dialog/MS_ChangePassword.java</file>
-            <file>file:/E:/JAVA_BTL/BIA_APP/src/BIA/View/Dialog/MS_Success.java</file>
-            <file>file:/E:/JAVA_BTL/BIA_APP/src/BIA/View/Form/Staff_Form/WarehouseStaff/Export_Form.java</file>
-            <file>file:/E:/JAVA_BTL/BIA_APP/src/BIA/View/Form/Staff_Form/Admin/BillStatistic_Form.java</file>
-            <file>file:/E:/JAVA_BTL/BIA_APP/src/BIA/View/Component/LoginAndRegister_Component/PanelCover.java</file>
-            <file>file:/E:/JAVA_BTL/BIA_APP/src/BIA/View/Form/Customer_Form/Bill_Form.java</file>
-            <file>file:/E:/JAVA_BTL/BIA_APP/src/BIA/View/Dialog/MS_Admin_Confirm.java</file>
-            <file>file:/E:/JAVA_BTL/BIA_APP/src/BIA/View/Dialog/MS_ConfirmReserve.java</file>
-            <file>file:/E:/JAVA_BTL/BIA_APP/src/BIA/View/Dialog/MS_ConfirmRename.java</file>
-            <file>file:/E:/JAVA_BTL/BIA_APP/src/BIA/View/Dialog/MS_Warning.java</file>
-            <file>file:/E:/JAVA_BTL/BIA_APP/src/BIA/View/Main_Frame/Main_Customer_Frame.java</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>
